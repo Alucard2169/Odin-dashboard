@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin-dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/932bed4b2e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="container">
+    <nav>
+        <div class="siteLogo">
+        <i class="fa-solid fa-dragon mainLogo"></i> <h1 class="logo">Salence</h1>
+        </div>
+        <ul class="siteLinks">
+            <li class="links"><i class="fa-solid fa-chart-simple"></i>Overview</li>
+            <li class="links"><i class="fa-solid fa-bag-shopping"></i>Product<i class="fa-solid fa-angle-down arrow"></i></li>
+            <li class="links"><i class="fa-solid fa-user"></i>Customers<i class="fa-solid fa-angle-down arrow"></i></li>
+            <li class="links"><i class="fa-solid fa-store"></i>Orders <span class="noti">3</span></li>
+            <li class="links"><i class="fa-solid fa-cart-shopping"></i>Checkout</li>
+            <li class="links"><i class="fa-solid fa-gear"></i>Settings</li>
+        </ul>
+        <ul class="contactLinks">
+            <li class="links"><i class="fa-solid fa-circle-question"></i>Help</li>
+            <li class="links"><i class="fa-solid fa-paper-plane"></i>Contact us</li>
+            <button class="log"><i class="fa-solid fa-right-from-bracket"></i>Log out</button>
+        </ul>
+    </nav>
+
+    <div class="dataContainer">
+        <div class="personalData">
+            <section class="message">
+                <h1 class="greet">
+                    Welcome Back, Jimmy
+                </h1>
+                <p class="mess">Here's what's happening with your store today.</p>
+            </section>
+            <section class="acc">
+                <label for="search">
+                    <input type="text" id="search" class="searchInput">
+                    <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+                </label>
+                <div class="notifications">
+                    <i class="fa-solid fa-bell" style="color: white"></i>
+                </div>
+                <div class="profile">
+                    <img src="https://i.pinimg.com/736x/7a/de/f8/7adef858899cc2ddc6c1f97c50a9da2d.jpg" alt="">
+                    <h3 class="name">Jenny Wilson</h3>
+                    <i class="fa-solid fa-angle-down arrow" style="color: white"></i>
+                </div>
+            </section>
+        </div>
+        <div class="data">
+                <div class="one">
+                    <span><i class="fa-solid fa-arrow-trend-up"></i>Total Sales</span>
+                    <h2 class="num">$825,491.73</h2>
+                    <p><i class="fa-solid fa-arrow-up"></i>20.9% +18.4K this week</p>
+                </div>
+                <div class="two">
+                    <span><i class="fa-solid fa-people-line"></i>Visitors</span>
+                    <h2 class="num">780,192</h2>
+                    <p><i class="fa-solid fa-arrow-up"></i> <span>12%</span>  +3.5K this week</p>
+                </div>
+                <div class="three">
+                    <span><i class="fa-solid fa-star"></i>Total Orders</span>
+                    <h2 class="num">2,625.991</h2>
+                    <p><i class="fa-solid fa-arrow-up"></i> <span>4.2%</span>  +5K this week</p>
+                </div>
+                <div class="four">
+                    <span><i class="fa-solid fa-rotate-left"></i>Refunded</span>
+                    <h2 class="num">780,192</h2>
+                    <p> <span><i class="fa-solid fa-arrow-down"></i> 9.1%</span>  +66 this week</p>
+                </div>
+
+                <section class="graph">
+                        <img src="./resource/graph.svg" alt="graph.svg">
+                </section>
+                <section class="statsChart">
+                    <img src="./resource/Group 1.svg" alt="">
+                </section>
+                <section class="searchProd">
+                    <div class="top">
+                        <h2>Top Products</h2>
+                        <div class="left">
+                            <label for="searchProd">
+                                <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+                                <input type="text" id="searchProd" placeholder="product">
+                            </label>
+                            <select name="time-lapse" id="Time">
+                                <option value="week">This Week</option>
+                                <option value="months">This Months</option>
+                                <option value="year">This Year</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+        </div>
+    </div>
+   </div> 
+</body>
+</html>

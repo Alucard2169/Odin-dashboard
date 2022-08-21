@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Figtree:wght@500&family=Poppins:wght@100;200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #121212;
+  overflow: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container nav {
+  width: 20%;
+  padding: 0 0 0 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-right: .1px gray solid;
+}
+
+.container nav i {
+  margin-right: 1rem;
+}
+
+.container nav li {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container nav .arrow,
+.container nav .noti {
+  margin-left: auto;
+}
+
+.container nav .noti {
+  background-color: #ff2a2a;
+  color: blue;
+  font-weight: bolder;
+  border-radius: 100px;
+  padding: .02rem .45rem;
+  margin-right: .7rem;
+}
+
+.container nav li::after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background-color: gray;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.container nav li:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.container nav li:hover {
+  color: greenyellow;
+}
+
+.container nav .siteLinks,
+.container nav .siteLogo,
+.container nav .contactLinks {
+  border: .1px gray solid;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  padding: 2rem 0;
+  color: white;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 1.1rem;
+}
+
+.container nav .siteLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container nav .siteLogo .logo {
+  color: white;
+  font-family: 'Figtree', sans-serif;
+}
+
+.container nav .siteLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.container nav .contactLinks {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  height: auto;
+}
+
+.container nav .contactLinks .log {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.container .dataContainer {
+  width: 80%;
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+}
+
+.container .dataContainer .personalData {
+  height: 6rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .dataContainer .personalData .message h1,
+.container .dataContainer .personalData .message p {
+  color: white;
+}
+
+.container .dataContainer .personalData .message .greet {
+  font-family: 'Figtree', sans-serif;
+}
+
+.container .dataContainer .personalData .message .mess {
+  margin-top: .5rem;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.container .dataContainer .personalData .acc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.container .dataContainer .personalData .acc label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .dataContainer .personalData .acc i {
+  margin-left: auto;
+}
+
+.container .dataContainer .personalData .acc .searchInput {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  display: none;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.container .dataContainer .personalData .acc .notifications {
+  margin-left: auto;
+}
+
+.container .dataContainer .personalData .acc .profile {
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dataContainer .personalData .acc .profile img {
+  border-radius: 100px;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.container .dataContainer .personalData .acc .profile .name {
+  color: white;
+  font-family: 'poppins', sans-serif;
+  font-size: .9rem;
+}
+
+.container .dataContainer .data {
+  max-width: 100%;
+  max-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: 'one two three four' 'graph graph graph stats' 'searchProd searchProd searchProd stats';
+  row-gap: 1rem;
+}
+
+.container .dataContainer .data div {
+  padding: 1rem;
+  background-color: #1E1E1E;
+}
+
+.container .dataContainer .data div i {
+  margin-right: 1rem;
+}
+
+.container .dataContainer .data div h2 {
+  margin-top: 1rem;
+}
+
+.container .dataContainer .data div h2,
+.container .dataContainer .data div p {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container .dataContainer .data div span {
+  font-family: 'Figtree', sans-serif;
+}
+
+.container .dataContainer .data div h2 {
+  font-size: 1.2rem;
+}
+
+.container .dataContainer .data div p {
+  font-size: .8rem;
+}
+
+.container .dataContainer .data .one {
+  background-color: #D6F476;
+  border-radius: 10px 0 0 10px;
+}
+
+.container .dataContainer .data .two,
+.container .dataContainer .data .three,
+.container .dataContainer .data .four {
+  border-left: 1px gray solid;
+}
+
+.container .dataContainer .data .two i,
+.container .dataContainer .data .three i,
+.container .dataContainer .data .four i {
+  color: white;
+}
+
+.container .dataContainer .data .two span,
+.container .dataContainer .data .two h2,
+.container .dataContainer .data .two p,
+.container .dataContainer .data .three span,
+.container .dataContainer .data .three h2,
+.container .dataContainer .data .three p,
+.container .dataContainer .data .four span,
+.container .dataContainer .data .four h2,
+.container .dataContainer .data .four p {
+  color: white;
+}
+
+.container .dataContainer .data .two span span,
+.container .dataContainer .data .two h2 span,
+.container .dataContainer .data .two p span,
+.container .dataContainer .data .three span span,
+.container .dataContainer .data .three h2 span,
+.container .dataContainer .data .three p span,
+.container .dataContainer .data .four span span,
+.container .dataContainer .data .four h2 span,
+.container .dataContainer .data .four p span {
+  color: green;
+}
+
+.container .dataContainer .data .four {
+  border-radius: 0 10px 10px 0;
+}
+
+.container .dataContainer .data .four p span {
+  color: red;
+}
+
+.container .dataContainer .data .graph {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: graph;
+}
+
+.container .dataContainer .data .graph img {
+  max-width: 98%;
+}
+
+.container .dataContainer .data .statsChart {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: stats;
+}
+
+.container .dataContainer .data .statsChart img {
+  max-width: 100%;
+}
+
+.container .dataContainer .data .searchProd {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: searchProd;
+  max-width: 98%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container .dataContainer .data .searchProd .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.container .dataContainer .data .searchProd .top h2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.container .dataContainer .data .searchProd .top .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.container .dataContainer .data .searchProd .top label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .dataContainer .data .searchProd .top label input {
+  position: relative;
+  border: 1px gray solid;
+  padding: .7rem;
+  border-radius: 100px;
+  width: 12rem;
+  background-color: transparent;
+  color: #1E1E1E;
+}
+
+.container .dataContainer .data .searchProd .top select {
+  background: transparent;
+  color: gray;
+  border: 1px gray solid;
+  border-radius: 20px;
+  padding: .5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    overflow: auto;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-bottom: 1px gray solid;
+  }
+  .container nav .siteLinks,
+  .container nav .contactLinks {
+    display: none;
+  }
+  .container nav .siteLogo {
+    border: none;
+    margin-bottom: auto;
+  }
+  .container nav li {
+    display: none;
+  }
+  .container .dataContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: auto;
+    width: 100%;
+  }
+  .container .dataContainer .personalData .message {
+    width: 40%;
+  }
+  .container .dataContainer .personalData .message .greet {
+    font-size: 1rem;
+  }
+  .container .dataContainer .personalData .message .mess {
+    font-size: .9rem;
+  }
+  .container .dataContainer .personalData .acc {
+    margin: 1rem 1rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .dataContainer .personalData .acc label {
+    margin-left: auto;
+  }
+  .container .dataContainer .personalData .acc .profile i {
+    display: none;
+  }
+  .container .dataContainer .personalData .acc .profile .name {
+    font-size: 1rem;
+  }
+  .container .dataContainer .data {
+    margin-top: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .dataContainer .data .one,
+  .container .dataContainer .data .two,
+  .container .dataContainer .data .three,
+  .container .dataContainer .data .four {
+    border-radius: 20px;
+    border-left: none;
+  }
+  .container .dataContainer .data .one {
+    width: 100%;
+  }
+  .container .dataContainer .data .two {
+    width: 100%;
+  }
+  .container .dataContainer .data .graph img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .dataContainer .data .statsChart img {
+    height: 100%;
+    width: 100%;
+  }
+  .container .dataContainer .data .searchProd .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .dataContainer .data .searchProd .top select {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
